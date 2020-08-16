@@ -1,62 +1,51 @@
 import React, {Component} from 'react';
-import { render } from '@testing-library/react';
 
 export default class Main extends Component {
   
   constructor() {
     super()
-    this.logoAry = ['DanHintzDesignLogo - D.svg', 'DanHintzDesignLogo - H.svg','DanHintzDesignLogo - Smile.svg', 'DanHintzDesignLogo - Wink.svg', 'DanHintzDesignLogo - Smile.svg']
+    this.logoAry = ['DanHintzDesignLogo - D.svg', 'DanHintzDesignLogo - H.svg','DanHintzDesignLogo - Smile.svg', 'DanHintzDesignLogo - Wink.svg', 'DanHintzDesignLogo - Smile.svg'];
+    this.completedAry = ['DanHintzDesignLogo - D.svg', 'DanHintzDesignLogo - DH.svg', 'DanHintzDesignLogo - DHSmile.svg', 'DanHintzDesignLogo - DHWink.svg', 'DanHintzDesignLogo - DHSmile.svg'];
   }
 
-   display(img, step) {
+  display(img, step) {
     // render given portion of logo
     const image = document.createElement("img");
     image.src = img;
     image.width = "100%";
     image.className = "logoimg";
     image.id=`logoimg${step}`;
-    const element = document.querySelector(".animation").appendChild(image);
-    setTimeout(() => {this.animate(element, step)}, 800);
-  };
-  
-  animate(el, step) {
-    // animate to become small and set in place
-    const completedAry = ['DanHintzDesignLogo - D.svg', 'DanHintzDesignLogo - DH.svg', 'DanHintzDesignLogo - DHSmile.svg', 'DanHintzDesignLogo - DHWink.svg', 'DanHintzDesignLogo - DHSmile.svg'];
-    const animInt = setInterval(frame, 5);
-    let size = 100;
-    function frame() {
-      if (size <= 20) {
-        clearInterval(animInt);
-        el.src = completedAry[step]
-        el.className = "builtlogo";
-        el.style.zIndex = toString(step);
-        if (step > 0) {document.querySelector(`#logoimg${step-1}`).remove()  }
-      } else {
-        size -= 10;
-        el.style.width = size + "%"
-      };
-    };
+    // hide after H so that they don't show as separate image on page
+    if (step > 1) {image.style.visibility="hidden"}
+    const element = document.querySelector(".logo").appendChild(image);
+    // replace with the combined logo pic to ensure correct spacing
+    setTimeout(() => {
+        element.src=this.completedAry[step];
+        if (step > 0) {document.querySelector(`#logoimg${step-1}`).remove()};
+        element.style.visibility="visible"
+    }, 499);
   };
 
   componentDidMount() {
-    // this.logoAry.map((el, idx) => setTimeout(() => {this.display(el, idx)}, 500));
-    let delay = 0
+    // set deleayInt to 500 for D to start, then move along delay array for each subsequent element
+    let delay = [1100, 1700, 2100, 2600];
+    let delayInt = 500;
     for (let i = 0; i < this.logoAry.length; i++) {
-      console.log(delay)
-      setTimeout(() => {this.display(this.logoAry[i], i)}, delay);
-      delay = delay + 500;      
+      setTimeout(() => {this.display(this.logoAry[i], i)}, delayInt);
+      delayInt = delay[i];
     }
-    // this.logoAry.map((el,idx) => animate(el, idx));
+    // final image(no text) will move to bottom left of screen and this makes it disappear
+    setTimeout(() => {document.getElementById("logoimg4").remove()}, 5100)
   }
 
   render() {
-    return(
+    return (
       <div className="Main">
-        <div className="animationPane">
-          <div className="animation">
+        <section className="logoAnimation">
+          <div className="logo">
 
           </div>
-        </div>
+        </section>
       </div>
     )
   }

@@ -34,59 +34,53 @@ code {
   color: white;
 }
 
-.animationPane {
-  position: relative;
-  width: 100%;
-  height: 100%;
+section {
+  display: block;
+  height: 300px;
+  width: 300px;
+  text-align: center;
+  margin: 0 auto;
 }
 
-.animation {
-  position: absolute;
-  /* width: 100%; */
-  /* bottom: -40vh;
-  left: 25vw; */
-  width: 100vw;
+.logo {
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  position: relative;
 }
 
 .logoimg {
-  position: relative;
-  bottom: 25vh;
-  left: 0vw;
-}
-
-.builtlogo {
+  height: 100%;
+  width: 100%;
   position: relative;
 }
 
-/* #logoimg0 {
-  z-index: 1;
+#logoimg0 {
+  animation: blow-up-entrance 500ms linear 0s 1 normal;
+  transform-origin: center;
 }
 
 #logoimg1 {
-  z-index: 0;
-}
-
-#logoimg2 {
-  bottom: -9px;
-  left: 5.5px;
-  z-index: 2;
-}
-
-#logoimg2::after {
-  display: none;
-}
-
-#logoimg3 {
-  bottom: -8px;
-  left: 5.5px;
-  z-index: 3;
+  animation: blow-up-entrance 500ms linear 0s 1 normal;
+  transform-origin: center;
+  position: absolute;
+  left: 0
 }
 
 #logoimg4 {
-  bottom: -10.5px;
-  left: 5.5px;
-  z-index: 4;
-} */
+  animation: move-aside .5s ease-in 2s 1 normal;
+  animation-fill-mode: forwards;
+}
+
+@keyframes move-aside {
+  from {top: 0; right: 0}
+  to {top: 36vh; right: 36vw}
+}
+
+@keyframes blow-up-entrance {
+  from {transform: scale(1.5)}
+  to {transform: scale(1)}
+}
 
 .App-header {
 
@@ -108,4 +102,9 @@ code {
 .Footer {
   background-color: grey;
   height: 100px;
+}
+
+.DHLogo {
+  margin-top: 10px;
+  margin-left: 10px;
 }
