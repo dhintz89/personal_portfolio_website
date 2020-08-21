@@ -39,6 +39,32 @@ code {
   color: white;
 }
 
+.About {
+  text-align: center;
+  background-color: #606979;
+  min-height: calc(100vh - 150px);
+  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.Blog {
+  text-align: center;
+  background-color: #606979;
+  min-height: calc(100vh - 150px);
+  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+/* Logo Animation */
+
 section {
   display: block;
   height: 300px;
@@ -87,9 +113,19 @@ section {
   to {transform: scale(1)}
 }
 
-.App-header {
+/* end animation */
 
+/* customize site */
+
+.optionsWindow {
+  border: 1px solid black;
+  background-color: white;
+  color: black;
+  min-height: 50vh;
+  min-width: 30vw;
 }
+
+/* end customize site */
 
 .Resume {
   text-align: center;
@@ -112,4 +148,8 @@ section {
 .DHLogo {
   height: 90%;
   margin: 2px 2px;
+}
+
+.followMe img {
+  vertical-align: middle;
 }
