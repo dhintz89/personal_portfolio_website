@@ -124,7 +124,7 @@ class SiteCustomizer extends Component {
     }
     
     toggleWindow = () => {
-        const el = document.getElementById("customizeMenu");
+        const el = document.querySelector(".customizeMenu");
         console.log("element is " + el)
         {el.classList.contains("hidden") 
             ? el.classList.remove("hidden") // open list (remove hidden class from div)
@@ -142,8 +142,8 @@ class SiteCustomizer extends Component {
 
         return (
             <div className="optionsWrapper">
-                <div className="optionsHeader" onClick={this.toggleWindow}><h3>Customize Your Own Site</h3></div>
-                <div id="customizeMenu" className="">
+                <div className="optionsHeader" onClick={this.toggleWindow}><h3>Customize Your Own Site!</h3></div>
+                <div className="customizeMenu hidden">
                     {menuArray}
                 </div>
             </div>
