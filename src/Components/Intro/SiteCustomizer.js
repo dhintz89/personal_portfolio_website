@@ -119,6 +119,50 @@ class SiteCustomizer extends Component {
                     value: "#9e0000",
                     cat: '--button-color'
                 },
+            ],
+            HeaderFooter: [
+                {
+                    id: 0,
+                    title: "White",
+                    value: "#ffffff",
+                    cat: '--header-footer-color'
+                },
+                {
+                    id: 1,
+                    title: "Black",
+                    value: "#000000",
+                    cat: '--header-footer-color'
+                },
+                {
+                    id: 2,
+                    title: "Light Grey",
+                    value: "#a6a6a6",
+                    cat: '--header-footer-color'
+                },
+                {
+                    id: 3,
+                    title: "Dark Grey",
+                    value: "#424242",
+                    cat: '--header-footer-color'
+                },
+                {
+                    id: 4,
+                    title: "Tan",
+                    value: "#FFFAE6",
+                    cat: '--header-footer-color'
+                },
+                {
+                    id: 5,
+                    title: "Light Blue",
+                    value: "#619DFF",
+                    cat: '--header-footer-color'
+                },
+                {
+                    id: 6,
+                    title: "Dark Blue",
+                    value: "#00004B",
+                    cat: '--header-footer-color'
+                }
             ]
         }
     }

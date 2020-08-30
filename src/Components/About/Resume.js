@@ -4,6 +4,7 @@ const Resume = () => {
   return (
     <div className="Resume">
 
+        <h3>Want to see more?</h3>
         <h3>Download My Resume:</h3>
         <div className="resLinks">
             <a className="resume-link" href="DanHintzResume.docx" target="_blank">Word</a>
