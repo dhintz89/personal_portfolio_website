@@ -72,6 +72,10 @@ code {
   cursor: pointer;
 }
 
+.optionsHeader:active > .customizeMenu {
+  max-height: 200px;
+}
+
 .customizeMenu {
   outline: 1px solid var(--font-color);
 }

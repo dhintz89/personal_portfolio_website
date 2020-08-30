@@ -14,7 +14,7 @@ const Navbar = () => {
     return (
         <div className="NavBar">
             <NavLink to="/" exact style={Link} activeStyle={{background: "darkgreen"}}>Home</NavLink>
-            <NavLink to="/about" exact style={Link} activeStyle={{backgroud: "darkgreen"}}>About</NavLink>
+            <NavLink to="/about" exact style={Link} activeStyle={{background: "darkgreen"}}>About</NavLink>
             <NavLink to="/blog" exact style={Link} activeStyle={{background: "darkgreen"}}>Blog</NavLink>
         </div>
     )

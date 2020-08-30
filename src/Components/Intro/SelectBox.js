@@ -1,5 +1,6 @@
 import React from 'react';
 
+// pass css variable attribute name (option.cat) & color value selected button (option.value) to update given CSS variable value
 const changePageStyle = (attr, selection) => {
     document.documentElement.style.setProperty(attr, selection);
 }
@@ -9,7 +10,8 @@ const SelectBox = props => {
     return (
         <div className="optionGroupWrapper">
             <h4 className="optionGroupHeader">{props.title}</h4>
-            <div className="options">{props.options.map(option => <button id={option.id} style={{backgroundColor:option.value}} onClick={() => changePageStyle(option.key, option.value)}/>)}</div>
+            {/* map across the array of option objects to create a button from each option */}
+            <div className="options">{props.options.map(option => <button key={option.id} style={{backgroundColor:option.value}} onClick={() => changePageStyle(option.cat, option.value)}/>)}</div>
         </div>
     )
 }
