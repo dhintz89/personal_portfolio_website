@@ -289,6 +289,7 @@ section {
   background-color: var(--header-footer-color);
   height: 50px;
   min-width: 100%;
+  vertical-align: middle;
 }
 
 .DHLogo {
@@ -296,8 +297,28 @@ section {
   margin: 2px 2px;
 }
 
+.followMe {
+  margin: 30px 0;
+}
+
 .followMe img {
   vertical-align: middle;
+}
+
+#brandBar {
+  display: inline-block;
+  max-height: 50px;
+  background-color: var(--header-footer-color);
+  right: 0;
+}
+
+#brandBar span {
+  background-color: var(--header-footer-color);
+}
+
+#copyright {
+  color: blue;
+  background-color: green;
 }
 
 .hidden {
