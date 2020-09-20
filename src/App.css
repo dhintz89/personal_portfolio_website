@@ -290,6 +290,8 @@ section {
   height: 50px;
   min-width: 100%;
   vertical-align: middle;
+  overflow: hidden;
+  position: relative;
 }
 
 .DHLogo {
@@ -306,19 +308,38 @@ section {
 }
 
 #brandBar {
+  position: relative;
   display: inline-block;
-  max-height: 50px;
-  background-color: var(--header-footer-color);
-  right: 0;
+  /* margin-left: 3%; */
+  background-color: white;
+  width: fit-content;
+  left: calc((100vw / 2) - 95px)
+}
+
+/* #brandBar {
+  position: absolute;
+  bottom: 0px;
+  left: 40%;
+  background-color: white;
+  width: fit-content;
+} */
+
+#brandBar p {
+  line-height: 16px;
+  text-align: center;
+  background: var(--header-footer-color);
+  color: var(--button-color);
+  text-decoration: underline;
+  padding-bottom: 1px;
 }
 
 #brandBar span {
-  background-color: var(--header-footer-color);
+  height: fit-content;
+  margin: 0 2px;
 }
 
-#copyright {
-  color: blue;
-  background-color: green;
+#brandBar img, svg {
+  background-color: white;
 }
 
 .hidden {
