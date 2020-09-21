@@ -268,7 +268,55 @@ section {
 #skillGraph {
   position: relative;
   border: 1px solid var(--button-color);
-  height: 150px;
+  padding-top: 75%;
+}
+
+.skillGraphBubble {
+  /* animation: scale ~1.2 while moving up/down while changing colors */
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--button-color);
+  color: var(--font-color);
+  border: 1px solid black;
+  font-size: .8em;
+}
+
+#JSSkill {
+  width: 33%;
+  height: 41%;
+  left: 32%;
+  top: 30%;
+}
+
+#rubySkill {
+  width: 23%;
+  height: 29%;
+  left: 5%;
+  top: 5%;
+}
+
+#htmlSkill {
+  width: 7%;
+  height: 9%;
+  left: 90%;
+  top: 10%;
+}
+
+#cssSkill {
+  width: 18%;
+  height: 22%;
+  left: 75%;
+  top: 72%;
+}
+
+#sqlSkill {
+  width: 12%;
+  height: 15%;
+  left: 10%;
+  top: 83%;
 }
 
 .Resume {
